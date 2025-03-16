@@ -2,11 +2,7 @@ import React from 'react';
 import '../styles/fonts.css';
 import Button from './Button';
 
-const Menu = () => {
-    const handleClick = () => {
-        alert('Button Clicked!');
-    };
-
+const Menu = ({incrementCount}) => {
     return (
         <div style={styles.container}>
             <h1 style ={styles.alert}>Alert</h1>
@@ -14,8 +10,8 @@ const Menu = () => {
                 <h2 style ={styles.middleText}>Incoming Message</h2>
             </div>
 
-            <Button size = '50px' xCoord = '25%' yCoord = '75%' color = '#2596be' isX = {false}></Button>
-            <Button size = '50px' xCoord = '75%' yCoord = '75%' color = '#cd5166' isX = {true}></Button>
+            <Button size = '75px' xCoord = '25%' yCoord = '75%' color = '#2596be' isX = {false} onClick = {incrementCount} />
+            <Button size = '75px' xCoord = '75%' yCoord = '75%' color = '#cd5166' isX = {true} onClick = {incrementCount} />
         </div>
     );
 };
@@ -27,8 +23,8 @@ const styles = {
         left: '50%',//top and left moves the top left? to the 50/50% of the screen
         top: '50%',  
         transform: 'translate(-50%, -70%)', // Centers it by shifting back by 50% of width & height
-        width: '400px',
-        height: '200px',
+        width: '600px',
+        height: '300px',
         backgroundColor: '#FFFFFF',
         border: '2px solid #ddd',
     },
@@ -36,7 +32,7 @@ const styles = {
         transform: 'translate(-0%, -30%)',
         textAlign: 'center',
         fontWeight: 'bold',
-        fontSize: '24px',
+        fontSize: '36px',
         fontFamily: 'saoBold',
     },
     middleContainer: {
@@ -52,6 +48,7 @@ const styles = {
     middleText: {
         textAlign: 'center',
         fontFamily: 'saoBold',
+        fontSize: '36px',
         transform:  'translate(0%,-15%)',
     },
     

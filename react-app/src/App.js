@@ -1,14 +1,24 @@
 import './App.css';
 import Menu from './components/Menu';
-import Background from './components/Background';
+import ScreenTwo from './components/ScreenTwo';
+import React, {useState} from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  const incrementCount = () => {
+    setCount(count+1);
+  };
+
+  const screens = {
+    0: <Menu incrementCount = {incrementCount} />,
+    1: <ScreenTwo/>
+    
+  };
 
   return (
     <div>
-      <Background/>
-      <Menu/>
-      {/*<Button text = 'Click Me' onClick = {handleClick} xCoord={100} yCoord={200}/>  */}
+      {screens[count]}
     </div>
   );
 }
