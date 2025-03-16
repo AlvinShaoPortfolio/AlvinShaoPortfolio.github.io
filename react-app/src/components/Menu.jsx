@@ -4,19 +4,26 @@ import Button from './Button';
 
 const Menu = ({incrementCount}) => {
     return (
-        <div style={styles.container}>
-            <h1 style ={styles.alert}>Alert</h1>
-            <div style ={styles.middleContainer}>
-                <h2 style ={styles.middleText}>Incoming Message</h2>
-            </div>
+        <div style = {styles.background}>
+            <div style={styles.container}>
+                <h1 style ={styles.alert}>Alert</h1>
+                <div style ={styles.middleContainer}>
+                    <h2 style ={styles.middleText}>Incoming Message</h2>
+                </div>
 
-            <Button size = '75px' xCoord = '25%' yCoord = '75%' color = '#2596be' isX = {false} onClick = {incrementCount} />
-            <Button size = '75px' xCoord = '75%' yCoord = '75%' color = '#cd5166' isX = {true} onClick = {incrementCount} />
+                <Button size = '75px' xCoord = '25%' yCoord = '75%' color = '#2596be' isX = {false} onClick = {incrementCount} />
+                <Button size = '75px' xCoord = '75%' yCoord = '75%' color = '#cd5166' isX = {true} onClick = {incrementCount} />
+            </div>
         </div>
     );
 };
 
 const styles = {
+    background: {
+        backgroundColor: "#000000",
+        width: '100vw',
+        height: '100vh',
+    },
     container: {
         opacity: '1',
         position: 'absolute',

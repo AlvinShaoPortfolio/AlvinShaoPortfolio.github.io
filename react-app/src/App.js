@@ -7,12 +7,12 @@ function App() {
   const [count, setCount] = useState(0);
 
   const incrementCount = () => {
-    setCount(count+1);
+    setCount((prev) => Math.min(prev + 1, Object.keys(screens).length - 1));
   };
 
   const screens = {
     0: <Menu incrementCount = {incrementCount} />,
-    1: <ScreenTwo/>
+    1: <ScreenTwo count = {count} setCount = {setCount}/>
     
   };
 
