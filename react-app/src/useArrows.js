@@ -15,7 +15,7 @@ const useArrows = (setCount) => {
     return () => {
       window.removeEventListener("keydown", handleKeyPress);
     };
-  }, [setCount]); // Depend on setCount
+  }, [setCount]); 
 };
 
 export default useArrows;

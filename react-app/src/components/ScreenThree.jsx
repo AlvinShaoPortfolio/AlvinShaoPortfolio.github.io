@@ -7,36 +7,57 @@ import '../Heart.css';
 const ScreenThree = ({count, setCount, incrementCount}) => {
     {/*This just handles key presses < and > to go forward and back between pages */}
     useArrows(setCount);
+
     const [yesCount, setYesCount] = useState(0);
     const [noCount, setNoCount] = useState(0);
+
     const heartFillPercentage = Math.max(100 - noCount * 20, 0);
 
     const incrementYesCount = () => {
         setYesCount(prev => prev + 1);
+        incrementCount();
     };
 
     const incrementNoCount = () => {
-        setNoCount(prev => prev + 1);
+        setNoCount(prev => {
+            const newNoCount = prev + 1;
+
+            if (newNoCount > 5) {
+                incrementCount();
+                incrementCount();
+            }
+
+            return newNoCount;
+        });
+
     };
 
     return (
-        <div style = {styles.container}>
-            
-            <p>yesCount: {yesCount}</p>
-            <p>noCount: {noCount}</p>
-
-            <div style={styles.heartContainer}>
-                <HeartSVG fillPercentage={heartFillPercentage} />
+        <div style={styles.fullContainer}>
+            <div style={styles.row}>
+                <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWV2OHE1azI3eG1nZmR3NXZkcGc2ejBuYjZ0NnljZ2tqOGJ1eGxwZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/afqxxaOBLlzge9gcXx/giphy.gif" width="350" />
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTRueWZhN2dob3Iyemd1ZjBnamhncG5kNjN5d3huaWRuYXQ4OWtuayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EVM9LY4lyxDhxteP81/giphy.gif" width="350" />
             </div>
+            <div style={styles.row}>
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWlxMnVoeHA5ejEwampoYTJxYTVub3c3MzMyeXRxdngwNmdmbXZ5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VmQGHEZlI5X9fUGBTa/giphy.gif" width="350" />
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGZ1dzQ5cWswczE4bnpmZmVoZXJnbmkybDJ4eGlnNzAxdGo3ZWh1cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IaqSvNAMdyuD7Tfco3/giphy.gif" width="350" />
+            </div>
+            <div style = {styles.container}>
+                <div style={styles.heartContainer}>
+                    <HeartSVG fillPercentage={heartFillPercentage} text = {'hi'} />
+                </div>
 
-            <YONButton size = '50px' xCoord = '25%' yCoord = '75%' color = '#2596be' isNo = {true} onClick = {incrementYesCount}></YONButton>
-            <YONButton size = '50px' xCoord = '75%' yCoord = '75%' color = '#FF0000' isNo = {false} onClick = {incrementNoCount}></YONButton>
+                <YONButton width="100px" height="50px"  xCoord = '25%' yCoord = '75%' color = '#39AD48' isNo = {false} noCount = {noCount} onClick = {incrementYesCount}></YONButton>
+                <YONButton key = {noCount} width="100px" height="50px"  xCoord = '75%' yCoord = '75%' color = '#FF0000' isNo = {true} noCount = {noCount}   onClick = {incrementNoCount}></YONButton>
+            </div>
         </div>
+
+
     );
 };
 
-const HeartSVG = ({ fillPercentage }) => (
-    <svg width="300" height="300" viewBox="0 0 100 150" style={styles.heartSvg}>
+const HeartSVG = ({ fillPercentage, text}) => (
+    <svg width="300" height="400" viewBox="0 30 100 100" style={styles.heartSvg}>
         <defs>
             {/* Clip-path to control the fill */}
             <clipPath id="heart-clip">
@@ -46,28 +67,45 @@ const HeartSVG = ({ fillPercentage }) => (
         {/* Filled Heart */}
         <path
             d="M50 85 L25 60 C10 45 15 25 30 20 C40 15 50 25 50 30 C50 25 60 15 70 20 C85 25 90 45 75 60 Z"
-            fill="red"
+            fill="#F36196"
             clipPath="url(#heart-clip)"
         />
         {/* Heart Outline */}
         <path
             d="M50 85 L25 60 C10 45 15 25 30 20 C40 15 50 25 50 30 C50 25 60 15 70 20 C85 25 90 45 75 60 Z"
             fill="none"
-            stroke="red"
+            stroke="#F36196"
             strokeWidth="2"
         />
+        <text 
+            x="50%" 
+            y="45%" 
+            textAnchor="middle" 
+            fontSize="10px" 
+            fill="black" 
+            fontFamily="saoBold"
+        >
+            {text}
+        </text>
     </svg>
 );
 
 const styles ={
+    fullContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: "#FFB6C1",
+        gap: '20px'     
+    },
     container: {
         width: '400px',
-        height: '400px',
+        height: '600px',
         position: 'absolute',
         left: '50%',
         top: '50%',
         transform: 'translate(-50%, -50%)',
-        border: '2px solid red'
     },
     heartContainer: {
         position: 'absolute',
@@ -79,6 +117,12 @@ const styles ={
         display: 'block',
         filter: 'drop-shadow(0 0 2px rgba(0, 0, 0, 0.2))',
     },
+    row: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        width: '80%', 
+        gap: '20px',
+    }
 }
 
 export default ScreenThree

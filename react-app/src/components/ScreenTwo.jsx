@@ -11,7 +11,7 @@ const ScreenTwo = ({count, setCount}) => {
             <VideoBackground/>
             <div style = {styles.textContainer}>
                 <p style = {styles.paragraph}>jhkjfdhskjfhdskjh</p>
-                <h1 style = {styles.bottomText}> Press {'>'} to continue or {'<'} to go back </h1>
+                <h1 style = {styles.bottomText}> Press {'>'} to continue </h1>
             </div>
         </div>
     );
@@ -32,7 +32,7 @@ const styles = {
     bottomText: {
         position: 'absolute',
         textAlign: 'center',
-        left: '30%',
+        left: '60%',
         top: '90%',
         transform: '(-20%, 50%)',
         fontFamily: 'saoBold',
