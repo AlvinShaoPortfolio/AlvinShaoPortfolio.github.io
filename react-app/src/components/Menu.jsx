@@ -6,9 +6,9 @@ const Menu = ({incrementCount}) => {
     return (
         <div style = {styles.background}>
             <div style={styles.container}>
-                <h1 style ={styles.alert}>Alert</h1>
+                <h1 style ={styles.alert}>Alert From Alvin</h1>
                 <div style ={styles.middleContainer}>
-                    <h2 style ={styles.middleText}>Incoming Message</h2>
+                    <h2 style ={styles.middleText}> Accept Incoming Message?</h2>
                 </div>
 
                 <Button size = '75px' xCoord = '25%' yCoord = '75%' color = '#2596be' isX = {false} onClick = {incrementCount} />

@@ -1,23 +1,10 @@
 import React, {useEffect} from 'react';
 import VideoBackground from "./VideoBackground";
+import useArrows from '../useArrows';
 
 const ScreenTwo = ({count, setCount}) => {
-    useEffect(() => {
-        const handleKeyPress = (event) => {
-            if (event.key === "ArrowRight") {
-                setCount((prev) => prev + 1);
-            }
-            else if(event.key == "ArrowLeft"){
-                setCount((prev) => prev -1);
-            }
-        };
-
-        window.addEventListener("keydown", handleKeyPress);
-        
-        return () => {
-            window.removeEventListener("keydown", handleKeyPress);
-        };
-    }, [setCount]);
+    {/*This just handles key presses < and > to go forward and back between pages */}
+    useArrows(setCount);
 
     return (
         <div>
