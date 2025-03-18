@@ -11,9 +11,11 @@ const ScreenTwoPartTwo = ({count, setCount}) => {
             <VideoBackground/>
             <div style = {styles.textContainer}>
                 <p style = {styles.paragraph}>
-                    {"I realize that we don’t know each other that well outside of School but I want to get to know you better. I get that you are really busy with work and school and that this is alot to drop on someone at once, but I hope that you will give it some thought. So I guess what I'm saying is, I like you and I was wondering if you would be down to get some food or do something together as more than just friends? "}
+                    {"I realize that we don’t know each other that well outside of school, but I want to get to know you better. I get that you are really busy with work and school and that this is alot to drop on someone at once, but I hope that you will give it some thought. So I guess what I'm saying is, I like you and I was wondering if you would be down to get some food or do something together as more than just friends? "}
                 </p>
-               
+                <p style = {styles.paragraph}>
+                    {"If you do want to do something I promise i'll try my best to make it as fun as possible. (Ik this is gonna sound selfish, but I hope that this doesnt make it awkward between us.)"}
+                </p>
                 <h1 style = {styles.bottomText}> Click anywhere to continue </h1>
             </div>
         </div>
@@ -26,7 +28,7 @@ const styles = {
         position: 'absolute',
         left: '50%', // Centers horizontally
         top: '50%',  // Centers vertically
-        transform: 'translate(-50%, -50%)', // Perfect centering
+        transform: 'translate(-50%, -60%)', // Perfect centering
         width: '400px',
         height: '500px',
         backgroundColor: '#FFFFFF',
@@ -48,10 +50,10 @@ const styles = {
     }, 
     paragraph: {
         fontFamily: 'saoBold',
-        marginTop: '-8vh',
-        fontSize: '24px',
+        marginTop: '0vh',
+        fontSize: '20px',
         textAlign: 'left', // Ensures readable formatting
-        marginBottom: '15vh', // Spacing between paragraphs
+        marginBottom: '4vh', // Spacing between paragraphs
         lineHeight: '1.6',
     }
 }

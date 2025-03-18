@@ -11,13 +11,13 @@ const ScreenTwo = ({count, setCount}) => {
             <VideoBackground/>
             <div style = {styles.textContainer}>
                 <p style = {styles.paragraph}>
-                    {"(This is my first time using Javascript and React so im sorry if it is a little scuffed and just a warning I’m not a good writer and I’m trying my hardest to not use my best friend GPT for this)" }
+                    {"(This is my first time using Javascript and React, so im sorry if it's a little scuffed. Also just a warning I’m not a good writer, but I’m trying my hardest to not use my best friend GPT for this)" }
                 </p>
                 <p style = {styles.paragraph}>
                     {"Hey Jessica, I know that this is a really weird way to get a letter like this but I've been meaning to send this for a while and I didn’t have the confidence to say it all face to face (i'm not non-chalant enough). So here is everything that I’ve been meaning to say."}
                 </p>
                 <p style = {styles.paragraph}>
-                    {"I thought that the way you tie your hair, the way you smile, the way you dress, how smart you are, how easily you try new things, and how hard you work, in my eyes made you incredibly pretty. "}
+                    {"In my eyes, everything you do makes you incredibly pretty. The way you do your hair, the way you smile, the way you dress, how smart you are, how easily you try new things, and how hard you work towards your future. "}
                 </p>
                 <h1 style = {styles.bottomText}> Click anywhere to continue </h1>
             </div>
@@ -31,7 +31,7 @@ const styles = {
         position: 'absolute',
         left: '50%', // Centers horizontally
         top: '50%',  // Centers vertically
-        transform: 'translate(-50%, -50%)', // Perfect centering
+        transform: 'translate(-50%, -60%)', // Perfect centering
         width: '400px',
         height: '500px',
         backgroundColor: '#FFFFFF',
