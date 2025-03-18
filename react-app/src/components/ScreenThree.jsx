@@ -35,12 +35,12 @@ const ScreenThree = ({count, setCount, incrementCount}) => {
     return (
         <div style={styles.fullContainer}>
             <div style={styles.row}>
-                <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWV2OHE1azI3eG1nZmR3NXZkcGc2ejBuYjZ0NnljZ2tqOGJ1eGxwZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/afqxxaOBLlzge9gcXx/giphy.gif" alt = 'cat1' width="300" />
-                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTRueWZhN2dob3Iyemd1ZjBnamhncG5kNjN5d3huaWRuYXQ4OWtuayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EVM9LY4lyxDhxteP81/giphy.gif" alt = 'cat2'width="300" />
+                <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWV2OHE1azI3eG1nZmR3NXZkcGc2ejBuYjZ0NnljZ2tqOGJ1eGxwZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/afqxxaOBLlzge9gcXx/giphy.gif" alt = 'cat1' width="350" />
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTRueWZhN2dob3Iyemd1ZjBnamhncG5kNjN5d3huaWRuYXQ4OWtuayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EVM9LY4lyxDhxteP81/giphy.gif" alt = 'cat2'width="350" />
             </div>
             <div style={styles.row}>
-                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWlxMnVoeHA5ejEwampoYTJxYTVub3c3MzMyeXRxdngwNmdmbXZ5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VmQGHEZlI5X9fUGBTa/giphy.gif" alt = 'cat3' width="300" />
-                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGZ1dzQ5cWswczE4bnpmZmVoZXJnbmkybDJ4eGlnNzAxdGo3ZWh1cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IaqSvNAMdyuD7Tfco3/giphy.gif" alt = 'cat4' width="300" />
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWlxMnVoeHA5ejEwampoYTJxYTVub3c3MzMyeXRxdngwNmdmbXZ5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VmQGHEZlI5X9fUGBTa/giphy.gif" alt = 'cat3' width="350" />
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGZ1dzQ5cWswczE4bnpmZmVoZXJnbmkybDJ4eGlnNzAxdGo3ZWh1cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IaqSvNAMdyuD7Tfco3/giphy.gif" alt = 'cat4' width="350" />
             </div>
             <div style = {styles.container}>
                 <div style={styles.heartContainer}>
@@ -121,11 +121,12 @@ const styles ={
         height: '80px',
         width: '200px',
         fontFamily: 'saoBold',
-        fontSize: '32px',
+        fontSize: '4vh',
         left: '50%', 
-        top: '25%',
-        alignItems: 'center',
-        transform: 'translate(-50%, -50%)'
+        top: '28vh',
+        textAlign: 'center',
+        transform: 'translate(-50%, -50%)',
+        color: '#000000'
     }
 }
 
