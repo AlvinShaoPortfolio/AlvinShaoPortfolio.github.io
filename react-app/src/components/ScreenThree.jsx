@@ -5,7 +5,7 @@ import '../styles/fonts.css';
 import '../Heart.css';
 
 const ScreenThree = ({count, setCount, incrementCount}) => {
-    {/*This just handles key presses < and > to go forward and back between pages */}
+    
     useArrows(setCount);
 
     const [yesCount, setYesCount] = useState(0);
@@ -35,29 +35,30 @@ const ScreenThree = ({count, setCount, incrementCount}) => {
     return (
         <div style={styles.fullContainer}>
             <div style={styles.row}>
-                <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWV2OHE1azI3eG1nZmR3NXZkcGc2ejBuYjZ0NnljZ2tqOGJ1eGxwZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/afqxxaOBLlzge9gcXx/giphy.gif" width="350" />
-                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTRueWZhN2dob3Iyemd1ZjBnamhncG5kNjN5d3huaWRuYXQ4OWtuayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EVM9LY4lyxDhxteP81/giphy.gif" width="350" />
+                <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWV2OHE1azI3eG1nZmR3NXZkcGc2ejBuYjZ0NnljZ2tqOGJ1eGxwZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/afqxxaOBLlzge9gcXx/giphy.gif" alt = 'cat1' width="300" />
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTRueWZhN2dob3Iyemd1ZjBnamhncG5kNjN5d3huaWRuYXQ4OWtuayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EVM9LY4lyxDhxteP81/giphy.gif" alt = 'cat2'width="300" />
             </div>
             <div style={styles.row}>
-                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWlxMnVoeHA5ejEwampoYTJxYTVub3c3MzMyeXRxdngwNmdmbXZ5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VmQGHEZlI5X9fUGBTa/giphy.gif" width="350" />
-                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGZ1dzQ5cWswczE4bnpmZmVoZXJnbmkybDJ4eGlnNzAxdGo3ZWh1cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IaqSvNAMdyuD7Tfco3/giphy.gif" width="350" />
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWlxMnVoeHA5ejEwampoYTJxYTVub3c3MzMyeXRxdngwNmdmbXZ5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VmQGHEZlI5X9fUGBTa/giphy.gif" alt = 'cat3' width="300" />
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGZ1dzQ5cWswczE4bnpmZmVoZXJnbmkybDJ4eGlnNzAxdGo3ZWh1cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IaqSvNAMdyuD7Tfco3/giphy.gif" alt = 'cat4' width="300" />
             </div>
             <div style = {styles.container}>
                 <div style={styles.heartContainer}>
-                    <HeartSVG fillPercentage={heartFillPercentage} text = {'hi'} />
+                    <HeartSVG fillPercentage={heartFillPercentage}/>
                 </div>
 
                 <YONButton width="100px" height="50px"  xCoord = '25%' yCoord = '75%' color = '#39AD48' isNo = {false} noCount = {noCount} onClick = {incrementYesCount}></YONButton>
                 <YONButton key = {noCount} width="100px" height="50px"  xCoord = '75%' yCoord = '75%' color = '#FF0000' isNo = {true} noCount = {noCount}   onClick = {incrementNoCount}></YONButton>
             </div>
+            <h1 style = {styles.text}>Would you give me the pleasure of going out with you?</h1>
         </div>
 
 
     );
 };
 
-const HeartSVG = ({ fillPercentage, text}) => (
-    <svg width="300" height="400" viewBox="0 30 100 100" style={styles.heartSvg}>
+const HeartSVG = ({ fillPercentage}) => (
+    <svg width="400" height="500" viewBox="0 30 100 100" style={styles.heartSvg}>
         <defs>
             {/* Clip-path to control the fill */}
             <clipPath id="heart-clip">
@@ -77,16 +78,6 @@ const HeartSVG = ({ fillPercentage, text}) => (
             stroke="#F36196"
             strokeWidth="2"
         />
-        <text 
-            x="50%" 
-            y="45%" 
-            textAnchor="middle" 
-            fontSize="10px" 
-            fill="black" 
-            fontFamily="saoBold"
-        >
-            {text}
-        </text>
     </svg>
 );
 
@@ -95,6 +86,8 @@ const styles ={
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        width: '100vw',
+        height: '100vh',
         justifyContent: 'center',
         backgroundColor: "#FFB6C1",
         gap: '20px'     
@@ -122,6 +115,17 @@ const styles ={
         justifyContent: 'space-between',
         width: '80%', 
         gap: '20px',
+    },
+    text: {
+        position: 'absolute',
+        height: '80px',
+        width: '200px',
+        fontFamily: 'saoBold',
+        fontSize: '32px',
+        left: '50%', 
+        top: '25%',
+        alignItems: 'center',
+        transform: 'translate(-50%, -50%)'
     }
 }
 

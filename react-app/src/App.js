@@ -5,6 +5,8 @@ import ScreenThree from './components/ScreenThree';
 import YesScreen from './components/YesScreen';
 import NoScreen from './components/NoScreen';
 import React, {useState} from "react";
+import AudioPlayer from './components/AudioPlayer';
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,6 +26,7 @@ function App() {
   return (
     <div>
       {screens[count]}
+      <AudioPlayer style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%,-50%)', display: count === 0 ? 'block' : 'none'}}/>
     </div>
   );
 }

@@ -9,9 +9,8 @@ const Menu = ({incrementCount}) => {
                 <h1 style ={styles.alert}>Invite</h1>
                 <div style ={styles.middleContainer}>
                     <h2 style ={styles.middleText}> Accept Incoming Message?</h2>
-                    <h2 style ={styles.underText}> Make sure you can hear the song</h2>
+                    <h2 style ={styles.underText}> Make sure you can hear the song before you accept {'(*it is very loud*)'}</h2>
                 </div>
-
                 <Button size = '75px' xCoord = '25%' yCoord = '80%' color = '#2596be' isX = {false} onClick = {incrementCount} />
                 <Button size = '75px' xCoord = '75%' yCoord = '80%' color = '#cd5166' isX = {true} onClick = {incrementCount} />
             </div>

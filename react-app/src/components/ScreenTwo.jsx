@@ -1,16 +1,19 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import VideoBackground from "./VideoBackground";
 import useArrows from '../useArrows';
 
 const ScreenTwo = ({count, setCount}) => {
-    {/*This just handles key presses < and > to go forward and back between pages */}
+    
     useArrows(setCount);
 
     return (
         <div>
             <VideoBackground/>
             <div style = {styles.textContainer}>
-                <p style = {styles.paragraph}>jhkjfdhskjfhdskjh</p>
+                <p style = {styles.paragraph}>
+                     
+                    {/*"(This is my first time using Javascript and React so im sorry if it is a little scuffed.)" */}
+                </p>
                 <h1 style = {styles.bottomText}> Press {'>'} to continue </h1>
             </div>
         </div>
@@ -19,7 +22,7 @@ const ScreenTwo = ({count, setCount}) => {
 
 const styles = {
     textContainer: {
-        opacity: '1',
+        opacity: '.5',
         position: 'absolute',
         left: '50%',//top and left moves the top left? to the 50/50% of the screen
         top: '50%',  
@@ -41,7 +44,7 @@ const styles = {
     paragraph: {
         position: 'absolute',
         fontFamily: 'saoBold',
-        fontSize: '24px',
+        fontSize: '18px',
         left: '5%'
     }
 }
