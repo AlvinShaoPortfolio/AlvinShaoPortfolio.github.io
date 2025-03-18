@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.7d6a487c.css",
-    "main.js": "/static/js/main.f70ea102.js",
+    "main.js": "/static/js/main.c16140f7.js",
     "static/js/453.2a82e7ac.chunk.js": "/static/js/453.2a82e7ac.chunk.js",
     "static/media/blue.mp3": "/static/media/blue.bf247c5e1dfc06ac9b26.mp3",
     "static/media/SAO Starry night.mp4": "/static/media/SAO Starry night.39dbb2b9a60804214a19.mp4",
     "static/media/SAOWelcomeTT-Bold.ttf": "/static/media/SAOWelcomeTT-Bold.53a005eedeb2729a1f31.ttf",
     "index.html": "/index.html",
     "main.7d6a487c.css.map": "/static/css/main.7d6a487c.css.map",
-    "main.f70ea102.js.map": "/static/js/main.f70ea102.js.map",
+    "main.c16140f7.js.map": "/static/js/main.c16140f7.js.map",
     "453.2a82e7ac.chunk.js.map": "/static/js/453.2a82e7ac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7d6a487c.css",
-    "static/js/main.f70ea102.js"
+    "static/js/main.c16140f7.js"
   ]
 }
