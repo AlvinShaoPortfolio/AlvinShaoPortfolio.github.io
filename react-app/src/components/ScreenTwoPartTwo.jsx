@@ -2,7 +2,7 @@ import React from 'react';
 import VideoBackground from "./VideoBackground";
 import useArrows from '../useArrows';
 
-const ScreenTwo = ({count, setCount}) => {
+const ScreenTwoPartTwo = ({count, setCount}) => {
     
     useArrows(setCount);
 
@@ -11,14 +11,9 @@ const ScreenTwo = ({count, setCount}) => {
             <VideoBackground/>
             <div style = {styles.textContainer}>
                 <p style = {styles.paragraph}>
-                    {"(This is my first time using Javascript and React so im sorry if it is a little scuffed and just a warning I’m not a good writer and I’m trying my hardest to not use my best friend GPT for this)" }
+                    {"I realize that we don’t know each other that well outside of School but I want to get to know you better. I get that you are really busy with work and school and that this is alot to drop on someone at once, but I hope that you will give it some thought. So I guess what I'm saying is, I like you and I was wondering if you would be down to get some food or do something together as more than just friends? "}
                 </p>
-                <p style = {styles.paragraph}>
-                    {"Hey Jessica, I know that this is a really weird way to get a letter like this but I've been meaning to send this for a while and I didn’t have the confidence to say it all face to face (i'm not non-chalant enough). So here is everything that I’ve been meaning to say."}
-                </p>
-                <p style = {styles.paragraph}>
-                    {"I thought that the way you tie your hair, the way you smile, the way you dress, how smart you are, how easily you try new things, and how hard you work, in my eyes it was all incredibly beautiful. "}
-                </p>
+               
                 <h1 style = {styles.bottomText}> Click anywhere to continue </h1>
             </div>
         </div>
@@ -53,12 +48,12 @@ const styles = {
     }, 
     paragraph: {
         fontFamily: 'saoBold',
-        marginTop: '-5vh',
-        fontSize: '20px',
+        marginTop: '-10vh',
+        fontSize: '24px',
         textAlign: 'left', // Ensures readable formatting
-        marginBottom: '6vh', // Spacing between paragraphs
+        marginBottom: '15vh', // Spacing between paragraphs
         lineHeight: '1.6',
     }
 }
 
-export default ScreenTwo;
+export default ScreenTwoPartTwo;

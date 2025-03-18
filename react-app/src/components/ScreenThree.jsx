@@ -5,8 +5,6 @@ import '../styles/fonts.css';
 import '../Heart.css';
 
 const ScreenThree = ({count, setCount, incrementCount}) => {
-    
-    useArrows(setCount);
 
     const [yesCount, setYesCount] = useState(0);
     const [noCount, setNoCount] = useState(0);

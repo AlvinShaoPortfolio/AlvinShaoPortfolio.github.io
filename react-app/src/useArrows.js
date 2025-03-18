@@ -2,18 +2,25 @@ import { useEffect } from "react";
 
 const useArrows = (setCount) => {
   useEffect(() => {
-    const handleKeyPress = (event) => {
-      if (event.key === "ArrowRight") {
+    const handleClick = (event) => {
+      if (event.button === 0) {
         setCount((prev) => prev + 1);
-      } else if (event.key === "ArrowLeft") {
+      } 
+      else if (event.button === 2) {
         setCount((prev) => prev - 1);
       }
     };
 
-    window.addEventListener("keydown", handleKeyPress);
+    const handleContextMenu = (event) => {
+      event.preventDefault(); 
+    };
+
+    window.addEventListener("mouseup", handleClick);
+    window.addEventListener("contextmenu", handleContextMenu);
     
     return () => {
-      window.removeEventListener("keydown", handleKeyPress);
+      window.removeEventListener("mouseup", handleClick);
+      window.removeEventListener("contextmenu", handleContextMenu);
     };
   }, [setCount]); 
 };
