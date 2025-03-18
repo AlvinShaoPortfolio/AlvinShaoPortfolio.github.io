@@ -17,7 +17,7 @@ const ScreenTwo = ({count, setCount}) => {
                     {"Hey Jessica, I know that this is a really weird way to get a letter like this but I've been meaning to send this for a while and I didn’t have the confidence to say it all face to face (i'm not non-chalant enough). So here is everything that I’ve been meaning to say."}
                 </p>
                 <p style = {styles.paragraph}>
-                    {"I thought that the way you tie your hair, the way you smile, the way you dress, how smart you are, how easily you try new things, and how hard you work, in my eyes it was all incredibly beautiful. "}
+                    {"I thought that the way you tie your hair, the way you smile, the way you dress, how smart you are, how easily you try new things, and how hard you work, in my eyes made you incredibly pretty. "}
                 </p>
                 <h1 style = {styles.bottomText}> Click anywhere to continue </h1>
             </div>
@@ -53,10 +53,10 @@ const styles = {
     }, 
     paragraph: {
         fontFamily: 'saoBold',
-        marginTop: '-5vh',
+        marginTop: '0vh',
         fontSize: '20px',
         textAlign: 'left', // Ensures readable formatting
-        marginBottom: '6vh', // Spacing between paragraphs
+        marginBottom: '4vh', // Spacing between paragraphs
         lineHeight: '1.6',
     }
 }

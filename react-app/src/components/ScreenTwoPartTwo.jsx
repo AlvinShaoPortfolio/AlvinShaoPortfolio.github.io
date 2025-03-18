@@ -48,7 +48,7 @@ const styles = {
     }, 
     paragraph: {
         fontFamily: 'saoBold',
-        marginTop: '-10vh',
+        marginTop: '-8vh',
         fontSize: '24px',
         textAlign: 'left', // Ensures readable formatting
         marginBottom: '15vh', // Spacing between paragraphs

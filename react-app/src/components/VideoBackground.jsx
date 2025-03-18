@@ -1,5 +1,5 @@
 import React from "react";
-import starryNightVideo from '../assets/SAO Starry night.mp4'
+import starryNightVideo from '../assets/Sao Starry Night2.mp4'
 import "./VideoBackground.css"; // Optional CSS file for styling
 
 const VideoBackground = () => {
